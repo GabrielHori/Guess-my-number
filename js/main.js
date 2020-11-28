@@ -15,7 +15,7 @@ $(document).ready(function () {
       }
     } else if (!a) {
       $("#guess").text("no number");
-    } else if (a < 1 || a > 20) {
+    } else if (a < 1 || a > 100) {
       $("#guess").text("Pas Inclu");
     } else if (a < guess) {
       $("#guess").text("Le chiffre est trop bas");
@@ -40,7 +40,7 @@ $(document).ready(function () {
     $("#win").text("GUESS MY NUMBER");
     score = 20;
     $("#score").text(score);
-    guess = Math.floor(Math.random() * 20) + 1;
+    guess = Math.floor(Math.random() * 100) + 1;
     $("body").css({ "background-color": " rgba(29, 27, 27, 0.849)" });
     $("#number").val("");
     //console.log("new number  = " + guess);
